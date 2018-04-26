@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mostack web</title>
-    <link>https://tomanistor.com/</link>
+    <link>http://mostack.top/</link>
     <description>Recent content on Mostack web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 25 Apr 2018 23:23:46 +0800</lastBuildDate>
     
-	<atom:link href="https://tomanistor.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://mostack.top/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Post Title</title>
-      <link>https://tomanistor.com/blog/post-title/</link>
+      <link>http://mostack.top/blog/post-title/</link>
       <pubDate>Wed, 25 Apr 2018 23:23:46 +0800</pubDate>
       
-      <guid>https://tomanistor.com/blog/post-title/</guid>
+      <guid>http://mostack.top/blog/post-title/</guid>
       <description></description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://tomanistor.com/about/</link>
+      <link>http://mostack.top/about/</link>
       <pubDate>Tue, 27 Jun 2017 17:39:21 -0700</pubDate>
       
-      <guid>https://tomanistor.com/about/</guid>
+      <guid>http://mostack.top/about/</guid>
       <description>欢迎来到 Mostack 这里不是一个copy paste的技术网站，这里更多的记录的是个人爱好或者一些想法
 给自己启发或者作为一个思路的记录
 跟之前有所不同</description>
@@ -33,19 +33,19 @@
     
     <item>
       <title>P</title>
-      <link>https://tomanistor.com/gallery/p/</link>
+      <link>http://mostack.top/gallery/p/</link>
       <pubDate>Mon, 15 May 2017 22:25:02 -0700</pubDate>
       
-      <guid>https://tomanistor.com/gallery/p/</guid>
+      <guid>http://mostack.top/gallery/p/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Z</title>
-      <link>https://tomanistor.com/gallery/z/</link>
+      <link>http://mostack.top/gallery/z/</link>
       <pubDate>Sun, 14 May 2017 22:25:02 -0700</pubDate>
       
-      <guid>https://tomanistor.com/gallery/z/</guid>
+      <guid>http://mostack.top/gallery/z/</guid>
       <description></description>
     </item>
     

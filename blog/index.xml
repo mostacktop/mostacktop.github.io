@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on Mostack web</title>
-    <link>https://tomanistor.com/blog/</link>
+    <link>http://mostack.top/blog/</link>
     <description>Recent content in Blogs on Mostack web</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Wed, 25 Apr 2018 23:23:46 +0800</lastBuildDate>
     
-	<atom:link href="https://tomanistor.com/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://mostack.top/blog/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Post Title</title>
-      <link>https://tomanistor.com/blog/post-title/</link>
+      <link>http://mostack.top/blog/post-title/</link>
       <pubDate>Wed, 25 Apr 2018 23:23:46 +0800</pubDate>
       
-      <guid>https://tomanistor.com/blog/post-title/</guid>
+      <guid>http://mostack.top/blog/post-title/</guid>
       <description></description>
     </item>
     
