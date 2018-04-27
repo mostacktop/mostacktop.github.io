@@ -6,11 +6,11 @@
   <title>
     
     
-        一次小的掉电ceph处理故障的记录 | Mostack web
+        一次掉电ceph处理故障的记录 | Mostack web
     
   </title>
 
-  <meta name="title" content="一次小的掉电ceph处理故障的记录 | Mostack web">
+  <meta name="title" content="一次掉电ceph处理故障的记录 | Mostack web">
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="chrome=1">
@@ -35,7 +35,7 @@
     <meta name="twitter:creator" content="@TomaNistor">
   
 
-  <meta property="og:title" content="一次小的掉电ceph处理故障的记录 | Mostack web">
+  <meta property="og:title" content="一次掉电ceph处理故障的记录 | Mostack web">
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://mostack.top/">
 
@@ -118,7 +118,7 @@
 
       <section class="container">
           <section class="content">
-              <h1> 一次小的掉电ceph处理故障的记录 </h1>
+              <h1> 一次掉电ceph处理故障的记录 </h1>
 
               <div class="sub-header">
                   April 25, 2018 · 1 minute read
@@ -127,15 +127,15 @@
               <article class="entry-content">
                   
 
-<h2 id="背景">背景</h2>
+<h2 id="1-背景">1、背景</h2>
 
 <p>有一个环境上面出现了的mon无法启动，osd无法启动，单机的一个环境</p>
 
-<h2 id="处理过程和思路">处理过程和思路</h2>
+<h2 id="2-处理过程和思路">2、处理过程和思路</h2>
 
 <p>拿到环境的第一感觉应该是有数据掉了，破坏了文件系统</p>
 
-<h3 id="修复操作系统文件系统">修复操作系统文件系统</h3>
+<h3 id="2-1-修复操作系统文件系统">2.1、修复操作系统文件系统</h3>
 
 <p>通过检查系统信息，发现了系统盘的ext4确实有问题</p>
 
@@ -145,7 +145,7 @@
 
 <p>文件系统修复好了</p>
 
-<h3 id="修复mon的数据">修复mon的数据</h3>
+<h3 id="2-2-修复mon的数据">2.2、修复mon的数据</h3>
 
 <p>那么接下来就是进行mon的启动，发现还是无法启动，说里面的数据结构不对</p>
 
@@ -159,7 +159,7 @@
 
 <p>这个也是第一次见到有mon数据库损坏的情况</p>
 
-<h3 id="处理osd">处理osd</h3>
+<h3 id="2-3-处理osd">2.3、处理osd</h3>
 
 <p>上去修复磁盘直接卡死，查看有个mount 的操作已经D进程了，这个应该是磁盘文件系统坏了，在mount的时候卡死了，这个时候的修复也会卡死，所以直接停止，准备重启服务器</p>
 
@@ -171,19 +171,19 @@
 
 <p>启动后又报文件的缺失，还好是osdmap，可以去其他地方找到，进行文件缺失的修复，然后再次启动，显示有数据异常，这个异常属于可以多重启几次可以起来的，会同步一些数据，然后就观察日志，进行多次启动即可，最后都启动了</p>
 
-<h3 id="pg未正常">pg未正常</h3>
+<h3 id="2-4-pg未正常">2.4、pg未正常</h3>
 
 <p>有一个pg里面的对象有丢失，直接卡在异常状态，通过查询丢失的对象，去后台确认对象主副本都不在了，就去直接mark 对象丢失了</p>
 
-<h3 id="恢复正常">恢复正常</h3>
+<h3 id="2-5-恢复正常">2.5、恢复正常</h3>
 
 <p>在上面的一系列操作以后，环境终于恢复了正常</p>
 
-<h2 id="大概的故障如下">大概的故障如下</h2>
+<h2 id="3-大概的故障如下">3、大概的故障如下</h2>
 
 <p><img src="http://7xo9we.com1.z0.glb.clouddn.com/recovery-cluster.png" alt="re" /></p>
 
-<h2 id="变更记录">变更记录</h2>
+<h2 id="4-变更记录">4、变更记录</h2>
 
 <table>
 <thead>
@@ -221,7 +221,7 @@
       
       if (window.location.hostname == "localhost")
         return;
-      var disqus_shortname = 'tomanistor';
+      var disqus_shortname = 'zphj1987';
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
       dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
